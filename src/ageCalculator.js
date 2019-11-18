@@ -6,10 +6,10 @@ const mercuryOrbitPeriod = 87.97;
 const venusOrbitPeriod = 224.7;
 const marsOrbitPeriod = 1.8808476*365.26;
 const jupiterOrbitPeriod = 11.862615*365.26;
-const saturnOrbitPeriod = 29.447498*365.26;
-const uranusOrbitPeriod = 84.016846*365.26;
-const neptuneOrbitPeriod = 164.79132*365.26;
-const plutoOrbitPeriod = 247.92065*365.26;
+const saturnOrbitPeriod = 10759.6;
+const uranusOrbitPeriod = 30685.5 ;
+const neptuneOrbitPeriod = 60190;
+const plutoOrbitPeriod = 90800;
 
 export class AgeCalculator {
     constructor(date, sex, country) {
@@ -139,5 +139,82 @@ export class AgeCalculator {
         }
         
         return this.getStringResult(birthdayMercury);
+    }
+
+    getNextBirthdayVenus() {
+        let birthdayVenus;
+        if (this.getVenusAge() === "You haven't born yet") {
+            birthdayVenus = this.birthday;
+        } else {
+            birthdayVenus = new Date((parseInt(this.getVenusAge()) + 1) * venusOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdayVenus);
+    }
+
+    getNextBirthdayMars() {
+        let birthdayMars;
+        if (this.getMarsAge() === "You haven't born yet") {
+            birthdayMars = this.birthday;
+        } else {
+            birthdayMars = new Date((parseInt(this.getMarsAge()) + 1) * marsOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdayMars);
+    }
+
+    getNextBirthdayJupiter() {
+        let birthdayJupiter;
+        if (this.getJupiterAge() === "You haven't born yet") {
+            birthdayJupiter = this.birthday;
+        } else {
+            birthdayJupiter = new Date((parseInt(this.getJupiterAge()) + 1) * jupiterOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdayJupiter);
+    }
+
+    getNextBirthdaySaturn() {
+        let birthdaySaturn;
+        if (this.getSaturnAge() === "You haven't born yet") {
+            birthdaySaturn = this.birthday;
+        } else {
+            birthdaySaturn = new Date((parseInt(this.getSaturnAge()) + 1) * saturnOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdaySaturn);
+    }
+
+    getNextBirthdayUranus() {
+        let birthdayUranus;
+        if (this.getUranusAge() === "You haven't born yet") {
+            birthdayUranus = this.birthday;
+        } else {
+            birthdayUranus = new Date((parseInt(this.getUranusAge()) + 1) * uranusOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdayUranus);
+    }
+
+    getNextBirthdayNeptune() {
+        let birthdayNeptune;
+        if (this.getNeptuneAge() === "You haven't born yet") {
+            birthdayNeptune = this.birthday;
+        } else {
+            birthdayNeptune = new Date((parseInt(this.getNeptuneAge()) + 1) * neptuneOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdayNeptune);
+    }
+
+    getNextBirthdayPluto() {
+        let birthdayPluto;
+        if (this.getPlutoAge() === "You haven't born yet") {
+            birthdayPluto = this.birthday;
+        } else {
+            birthdayPluto = new Date((parseInt(this.getPlutoAge()) + 1) * plutoOrbitPeriod * 3600*1000*24 + this.birthday.getTime());
+        }
+        
+        return this.getStringResult(birthdayPluto);
     }
 }
