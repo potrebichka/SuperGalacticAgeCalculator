@@ -131,6 +131,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayMercury() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayMercury;
         if (this.getMercuryAge() === "You haven't born yet") {
             birthdayMercury = this.birthday;
@@ -142,6 +145,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayVenus() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayVenus;
         if (this.getVenusAge() === "You haven't born yet") {
             birthdayVenus = this.birthday;
@@ -153,6 +159,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayMars() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayMars;
         if (this.getMarsAge() === "You haven't born yet") {
             birthdayMars = this.birthday;
@@ -164,6 +173,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayJupiter() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayJupiter;
         if (this.getJupiterAge() === "You haven't born yet") {
             birthdayJupiter = this.birthday;
@@ -186,6 +198,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayUranus() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayUranus;
         if (this.getUranusAge() === "You haven't born yet") {
             birthdayUranus = this.birthday;
@@ -197,6 +212,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayNeptune() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayNeptune;
         if (this.getNeptuneAge() === "You haven't born yet") {
             birthdayNeptune = this.birthday;
@@ -208,6 +226,9 @@ export class AgeCalculator {
     }
 
     getNextBirthdayPluto() {
+        if (this.birthday == "Invalid Date"){
+            return "00-00-0000";
+        }
         let birthdayPluto;
         if (this.getPlutoAge() === "You haven't born yet") {
             birthdayPluto = this.birthday;
