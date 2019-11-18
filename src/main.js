@@ -53,6 +53,14 @@ $(function() {
         $("#plutoExpect").text(user.getLifeExpectPluto());
 
         $("#earthBirthday").text(user.getNextBirthdayEarth());
+        $("#mercuryBirthday").text(user.getNextBirthdayMercury());
+        $("#venusBirthday").text(user.getNextBirthdayVenus());
+        $("#marsBirthday").text(user.getNextBirthdayMars());
+        $("#jupiterBirthday").text(user.getNextBirthdayJupiter());
+        $("#saturnBirthday").text(user.getNextBirthdaySaturn());
+        $("#uranusBirthday").text(user.getNextBirthdayUranus());
+        $("#neptuneBirthday").text(user.getNextBirthdayNeptune());
+        $("#plutoBirthday").text(user.getNextBirthdayPluto());
 
         $("#results").show();
         
