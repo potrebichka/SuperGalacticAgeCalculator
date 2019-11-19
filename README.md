@@ -34,6 +34,8 @@ npm run build
 * User can get his/her ages at different planets.
 * User can get how many years he/she has left to live on each planet. If a user has already surpassed the average life expectancy, he/she gets the number of years they have lived past the life expectancy.
 * User can get the date of a next birthday on each planet.
+* If user inputs date of birthday in the future he gets message that "You haven't been born yet ". And user gets as his next birthday day he entered.
+* If user didn't select any date he gets message "You haven't born yet" and as the next birthday - "00-00-0000".
 
 ## Technologies Used
 
